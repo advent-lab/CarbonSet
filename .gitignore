@@ -1,7 +1,7 @@
 __pycache__/
 .vscode/
 *.pdf
-
+.DS_Store
 # Ignore all files in dataset folder
 dataset/*
 
