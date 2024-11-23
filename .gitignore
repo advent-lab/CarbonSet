@@ -1,0 +1,9 @@
+__pycache__/
+.vscode/
+*.pdf
+
+# Ignore all files in dataset folder
+dataset/*
+
+# Except for DataSetWithRelaventNodesArea.xlsx
+!dataset/DataSetWithRelaventNodesArea.xlsx
