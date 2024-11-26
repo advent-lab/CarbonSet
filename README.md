@@ -1,6 +1,6 @@
 ## What is CarbonSet
 
-CarbonSet is a carbon footprint(CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* (throughput, OpenCL [Geekbench](https://www.geekbench.com/), Passmark [PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis
+CarbonSet is a carbon footprint(CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* ([Geekbench-OpenCL](https://www.geekbench.com/),[PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis
 
 ![Fig 1](carbonset.png)
 
