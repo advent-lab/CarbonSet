@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd 
-from  matplotlib import pyplot as plt
 
 #Importing all functions from CO2_func files
 from CO2_func import * 

@@ -6,4 +6,5 @@ __pycache__/
 dataset/*
 
 # Except for DataSetWithRelaventNodesArea.xlsx
-!dataset/DataSetWithRelaventNodesArea.xlsx
+!dataset/CarbonSet.csv
+

@@ -1,12 +1,11 @@
 import pandas as pd
 import json
-
+import os, sys
 
 
 tech_indices = [  7,  10,  14,  22,  28]
 def load_tables():
 
-   
     with open("tech_params/logic_scaling.json",'r') as logic_sc:
         LOGIC_scaling_table = json.load(logic_sc)
     logic_scaling = pd.DataFrame(data=LOGIC_scaling_table, index=tech_indices) 
