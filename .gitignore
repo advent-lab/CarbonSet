@@ -1,6 +1,7 @@
 __pycache__/
 .vscode/
 *.pdf
+!carbonset_overview.pdf
 .DS_Store
 # Ignore all files in dataset folder
 dataset/*
