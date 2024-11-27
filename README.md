@@ -1,8 +1,10 @@
 ## What is CarbonSet
 
-CarbonSet is a carbon footprint (CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* ([Geekbench-OpenCL](https://www.geekbench.com/),[PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis
+CarbonSet is a carbon footprint (CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* ([Geekbench-OpenCL](https://www.geekbench.com/),[PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis.
 
 ![Fig 1](carbonset.png)
+
+There are 4 main aspects of CarbonSet that are briefly descirbed in the sub-sections below:
 
 ### Dataset
 
@@ -12,7 +14,7 @@ CarbonSet is a carbon footprint (CFP) dataset contains over 1600 processors. Thi
 
 We primarily use [ECO-CHIP](https://github.com/ASU-VDA-Lab/ECO-CHIP) to model the CFP of processors. We updated ECO-CHIP to make it probabilistic. This means that input parameters to ECO-CHIP can now be distributions (probability distributions or kernel density estimations) instead of fixed values. This change was inspired by the observation that several parameters that contribute to CFP have uncertainity in them. For example, parameters of semiconductor manufacturing, such as defect density, are not fixed. Instead, they vary due to various factors such as geo-locations, different implementations of a process node and later process improvements, etc. Therefore, in our enhanced ECO-CHIP, the output CFP is a distribution to better cover the wide range of possible values.
 
-You can find the source code in `eco_chip_enhanced` folder, which contains all the required parameters and modeling functions we implemented. 
+You can find the source code of the enhanced ECO-CHIP in `eco_chip_enhanced` folder, which contains all the required parameters and modeling functions we implemented. 
 
 ### Trend analysis for flagship processors
 
