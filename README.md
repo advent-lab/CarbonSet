@@ -14,34 +14,6 @@ We primarily use [ECO-CHIP](https://github.com/ASU-VDA-Lab/ECO-CHIP) to model th
 
 You can find the source code in `eco_chip_enhanced` folder, which contains all the required parameters and modeling functions we implemented. 
 
-#### How to use the Repo?
-
-##### Requirements
-
-Python >= 3.8, numpy, matplotlib, seaborn, pandas, json
-
-##### Function Modules and Notebooks
-
-You can find an out-of-box using notebook generating corresponding plots and CSV files in every sub-folder.
-
-We mainly use the function `eco_chip` in the wrapper python file `eco_chip_func.py` to interact with complicated ECO-CHIP modules. This function accepts 6 input arguments including the `chip area`, `process node`, `chip TDP`, `defective density of the process node`, `gas_per_area (gpa)`, `energy_per_area (eap)` and `carbon_intensity`.
-
-```python
-args = argparse.Namespace(design_dir='testcases/CFP_survey/', 
-                            chip_area=area, 
-                            node=node, 
-                            chip_power=power, 
-                            defect_density=defect_density,
-                            num_lifetime=None, 
-                            gpa = gpa_val, 
-                            epa = epa_val,
-                            carbon_intensity=ci_val)    
-
-c_des, c_mfg, c_ope, c_tot = eco_chip(args)
-```
-
-You can generate all the plots and processed CSV datasets by running the notebook `eco_chip_enhanced/cfp_calculation.ipynb` and create a `plots` folder under the `CarbonSet` base path. See details in the python notebook.
-
 ### Trend analysis for flagship processors
 
 We collected performance metrics of flagship processors over the last decade for both desktop series and datacenter series. The collected datasets can be found in `flagship_trends/dataset`. We provide a historical view of processors design trend in sustainability-performance balance using aforementioned metrics. You can also find the scripts to generate corresponding images for better visualization in the same folder. 
@@ -73,6 +45,34 @@ We collected performance metrics of flagship processors over the last decade for
 - [Base Dataset Analysis Paper](https://arxiv.org/abs/1911.11313)
 - [Geekbench-OpenCL](https://www.geekbench.com/)
 - [Passmark](https://www.passmark.com/)
+
+## How to use the Repo?
+
+### Requirements
+
+Python >= 3.8, numpy, matplotlib, seaborn, pandas, json
+
+### Function Modules and Notebooks
+
+You can find an out-of-box using notebook generating corresponding plots and CSV files in every sub-folder.
+
+We mainly use the function `eco_chip` in the wrapper python file `eco_chip_func.py` to interact with complicated ECO-CHIP modules. This function accepts 6 input arguments including the `chip area`, `process node`, `chip TDP`, `defective density of the process node`, `gas_per_area (gpa)`, `energy_per_area (eap)` and `carbon_intensity`.
+
+```python
+args = argparse.Namespace(design_dir='testcases/CFP_survey/', 
+                            chip_area=area, 
+                            node=node, 
+                            chip_power=power, 
+                            defect_density=defect_density,
+                            num_lifetime=None, 
+                            gpa = gpa_val, 
+                            epa = epa_val,
+                            carbon_intensity=ci_val)    
+
+c_des, c_mfg, c_ope, c_tot = eco_chip(args)
+```
+
+You can generate all the plots and processed CSV datasets by running the notebook `eco_chip_enhanced/cfp_calculation.ipynb` and create a `plots` folder under the `CarbonSet` base path. See details in the python notebook.
 
 ## How to contribute?
 
