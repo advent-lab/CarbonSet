@@ -1,16 +1,16 @@
 ## What is CarbonSet
 
-CarbonSet is a carbon footprint(CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* ([Geekbench-OpenCL](https://www.geekbench.com/),[PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis
+CarbonSet is a carbon footprint (CFP) dataset contains over 1600 processors. This dataset includes data for desktop and datacenter CPUs and GPUs across multiple metrics - *design metrics* (chip area, technology node, transistors, TDP), *performance metrics* ([Geekbench-OpenCL](https://www.geekbench.com/),[PassMark](https://www.passmark.com/)), and *sustainability metrics* (ECFP, OCFP, total CFP). It also offers composite metrics like Performance per CFP and ECFP per unit area (ECFPA) for deeper tradeoff-based trend analysis
 
 ![Fig 1](carbonset.png)
 
 ### Dataset
 
-`CarbonSet.csv` is the main dataset containing multiple CFP enhanced metrics stored in `dataset/`folder. The CFP values are modeled using our enhanced ECO-CHIP with the most probable values input. Details are explained in next session and `README.md` in `eco_chip_enhanced/` 
+`CarbonSet.csv` is the main dataset containing multiple CFP enhanced metrics stored in `dataset/`folder. The CFP values are modeled using our enhanced ECO-CHIP. Details are explained below and `README.md` in `eco_chip_enhanced/` 
 
 ### Updates to ECO-CHIP
 
-We primarily use [ECO-CHIP](https://github.com/ASU-VDA-Lab/ECO-CHIP) to model the processor CFP and updated it to a probabilistic version. Practically, the parameters of of semiconductor manufacturing are not fixed values. In stead, they are different due to various factors such as geo-locations, different implementations of a process node and later process improvements, etc. Therefore, in our enhanced ECO-CHIP, processors are modeled under a probability distribution to better cover the wide range of possible CPF values due to different manufacturing.
+We primarily use [ECO-CHIP](https://github.com/ASU-VDA-Lab/ECO-CHIP) to model the CFP of processors. We updated ECO-CHIP to make it probabilistic. This means that input parameters to ECO-CHIP can now be distributions (probability distributions or kernel density estimations) instead of fixed values. This change was inspired by the observation that several parameters that contribute to CFP have uncertainity in them. For example, parameters of semiconductor manufacturing, such as defect density, are not fixed. Instead, they vary due to various factors such as geo-locations, different implementations of a process node and later process improvements, etc. Therefore, in our enhanced ECO-CHIP, the output CFP is a distribution to better cover the wide range of possible values.
 
 You can find the source code in `eco_chip_enhanced` folder, which contains all the required parameters and modeling functions we implemented. 
 
