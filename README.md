@@ -52,11 +52,11 @@ We collected performance metrics of flagship processors over the last decade for
 
 Python >= 3.8, numpy, matplotlib, seaborn, pandas, json
 
-### Function Modules and Notebooks
+### Notebooks
 
-You can find an out-of-box using notebook generating corresponding plots and CSV files in every sub-folder.
+You can find a notebook generating plots and CSV files in every sub-folder (mentioned above) of the repo.
 
-We mainly use the function `eco_chip` in the wrapper python file `eco_chip_func.py` to interact with complicated ECO-CHIP modules. This function accepts 6 input arguments including the `chip area`, `process node`, `chip TDP`, `defective density of the process node`, `gas_per_area (gpa)`, `energy_per_area (eap)` and `carbon_intensity`.
+As a general note, we mainly use the function `eco_chip` in the wrapper python file `eco_chip_func.py` to interact with ECO-CHIP. This function accepts 6 input arguments including the `chip area`, `process node`, `chip TDP`, `defective density of the process node`, `gas_per_area (gpa)`, `energy_per_area (eap)` and `carbon_intensity`.
 
 ```python
 args = argparse.Namespace(design_dir='testcases/CFP_survey/', 
