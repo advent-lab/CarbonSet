@@ -72,7 +72,7 @@ args = argparse.Namespace(design_dir='testcases/CFP_survey/',
 c_des, c_mfg, c_ope, c_tot = eco_chip(args)
 ```
 
-You can generate all the plots and processed CSV datasets by running the notebook `eco_chip_enhanced/cfp_calculation.ipynb` and create a `plots` folder under the `CarbonSet` base path. See details in the python notebook.
+You can generate all the plots and CSVs (except for the case studies mentioned above) by running the notebook `eco_chip_enhanced/cfp_calculation.ipynb` under the `CarbonSet` base path. See details in the notebook.
 
 ## How to contribute?
 
