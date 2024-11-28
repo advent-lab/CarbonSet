@@ -19,12 +19,15 @@ def eco_chip(args):
         print("Please provide the arguments")
         exit(-1)
 
+    if args.tech_scaling_path is None:
+        scaling_factors = load_tables()
+        design_dir = args.design_dir
 
-    scaling_factors = load_tables()
-
+    else:
+        scaling_factors = load_tables(args.tech_scaling_path)
+        design_dir = args.tech_scaling_path + args.design_dir
 
     ##
-    design_dir = args.design_dir
     ##
 
     if args.chip_area is not None:
@@ -226,6 +229,13 @@ if __name__ == '__main__':
             default=None,
             help='EPA'
     )
+
+    parser.add_argument(
+            '--tech_scaling_path',
+            default=None,
+            help='tech_scaling_path'
+    )
+
     args = parser.parse_args()
     c_des, c_mfg, c_ope, c_tot = eco_chip(args)
     # print("Des CFP : ",c_des)

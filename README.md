@@ -8,7 +8,9 @@ There are 4 main aspects of CarbonSet that are briefly descirbed in the sub-sect
 
 ### Dataset
 
-`CarbonSet.csv` is the main dataset containing multiple CFP enhanced metrics stored in `dataset/`folder. The CFP values are modeled using our enhanced ECO-CHIP. Details are explained below and `README.md` in `eco_chip_enhanced/` 
+`CarbonSet.csv` is the main dataset containing multiple CFP enhanced metrics stored in `dataset/`folder. The CFP values are modeled using our enhanced ECO-CHIP. Details are explained below and `README.md` in `eco_chip_enhanced/`. 
+
+For simplicity, we also provide `dataset/CarbonSet.ipynb` as a fast-track option. In this notebook, the maximum, minimum, and most probable values of the input parameters are pre-sampled as fixed constants from our probabilistic distribution. Use this notebook if you prefer not to modify the probabilistic distribution.
 
 ### Updates to ECO-CHIP
 
@@ -69,6 +71,7 @@ args = argparse.Namespace(design_dir='testcases/CFP_survey/',
                             num_lifetime=None, 
                             gpa = gpa_val, 
                             epa = epa_val,
+                            tech_scaling_path = None,
                             carbon_intensity=ci_val)    
 
 c_des, c_mfg, c_ope, c_tot = eco_chip(args)
