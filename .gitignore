@@ -7,4 +7,6 @@ dataset/*
 
 # Except for DataSetWithRelaventNodesArea.xlsx
 !dataset/CarbonSet.csv
+!dataset/CarbonSet.ipynb
 
+ß
