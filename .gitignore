@@ -3,9 +3,9 @@ __pycache__/
 *.pdf
 .DS_Store
 # Ignore all files in dataset folder
-dataset/*
+dataset/*.csv
 
 # Except for DataSetWithRelaventNodesArea.xlsx
 !dataset/CarbonSet.csv
-!dataset/CarbonSet.ipynb
+# !dataset/CarbonSet.ipynb
 
