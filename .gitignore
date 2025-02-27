@@ -3,6 +3,6 @@ __pycache__/
 *.pdf
 .DS_Store
 # Ignore all .csv files except CarbonSet.csv
-*.csv
 !dataset/CarbonSet.csv
 eco_chip_enhanced/chiplet_dir/
+processing.ipynb
