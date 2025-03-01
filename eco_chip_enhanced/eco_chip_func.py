@@ -41,7 +41,8 @@ def eco_chip(args):
         NUM_Life = NUM_Life*24*365 #in hrs     
 
 
-        
+    if design_dir is None:
+        design_dir = "chiplet_dir/"
     architecture_file = design_dir+'architecture.json'
     node_list_file = design_dir+'node_list.txt'
     designC_file = design_dir+'designC.json'
@@ -51,13 +52,15 @@ def eco_chip(args):
 
     with open(architecture_file,'r') as json_file:
         config_json = json.load(json_file)
-
+    
     with open(node_list_file , 'r') as file:
         nodes=file.readlines()
     nodes = [ast.literal_eval(node_item) for node_item in nodes]
     nodes = [data for inside_node in nodes for data in inside_node]
 
     design = pd.DataFrame(config_json).T
+    print(f"*** read from json *** \n{design}")    
+
 
     package_type = design.loc['pkg_type']
     package_type = package_type.iloc[0]
@@ -70,7 +73,11 @@ def eco_chip(args):
     inp_des.at['Logic','area'] = chip_area
     design=inp_des
 
+    print(f"*** reset design=inp_des *** \n{design}")    
+
+
     #Area knob
+
     if args.chip_area is not None:
         design.at['Logic','area'] = chip_area
     else : 
@@ -143,13 +150,7 @@ def eco_chip(args):
         scaling_factors['defect_den'].loc[nodes[0], 'defect_density'] = float(args.defect_density)
         scaling_factors['cpa'].loc[nodes[0], 'cpa'] = cpa_values
 
-    # if args.cfpa is not None:
-    #     cpa_values = float(args.cfpa)
-    #     scaling_factors['cpa'].loc[nodes[0], 'cpa'] = cpa_values
 
-    # print(f"node {node_val}, cpa_values {cpa_values:.2f}, defect_density {defect_density:.2f} "
-    #       f"epa {epa:.2f}, gpa {gpa:.2f}, carbon_per_kWh {carbon_per_kWh:.2f}")
-    
     result = calculate_CO2(design,scaling_factors, nodes, 'Tiger Lake',
                         num_iter,package_type=package_type ,Ns=num_prt_mfg,lifetime=lifetime,
                         carbon_per_kWh=carbon_per_kWh,transistors_per_gate=transistors_per_gate,
