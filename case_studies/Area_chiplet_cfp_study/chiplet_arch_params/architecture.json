@@ -1,0 +1,48 @@
+{
+    "CPU_0": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_1": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_2": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_3": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_4": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_5": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_6": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_7": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "CPU_8": {
+        "type": "logic",
+        "area": 850,
+        "node": 7
+    },
+    "pkg_type": "RDL"
+}
