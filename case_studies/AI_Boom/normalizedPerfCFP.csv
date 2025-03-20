@@ -1,9 +1,0 @@
-Product, Release Date, TFLOPS/CFP, Total CFP Normalized, Total Chip Sold Normalized, CFP per Chip Normalized
-P100,2016,1,1,1,1
-V100,2017,12,2,2,1.03
-V100,2018,12,5,4.7,1.03
-V100,2019,12,7,7.2,1.03
-A100,2020,32,9,4.6,1.85
-A100,2021,32,19,10.4,1.85
-H100,2022,116,37,11.8,3.2
-H100,2023,116,53,16.7,3.2

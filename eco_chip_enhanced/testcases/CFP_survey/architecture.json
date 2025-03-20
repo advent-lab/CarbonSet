@@ -1,7 +1,0 @@
-{
-"CPU" : {
-          "type" : "logic",
-          "area" : 118
-        },
-"pkg_type" : "RDL"
-}
